@@ -1,5 +1,5 @@
 import streamlit as st
-from st_functions import st_button, load_css
+from st_functions import st_button
 
 st.title(':blue[OUR TEAM]')
 
