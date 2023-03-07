@@ -1,0 +1,12 @@
+{
+    "type": "service_account",
+    "project_id": "celestial-license",
+    "private_key_id": "631d3789cf03bcd5fe21a5960f3be356d1981f86",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDLhesh383tEmp5\nGCqEf19LbO42JbhxbLLe4EGGkED2raM8wOFMDjPKp5f7jwZTAaab3/DKU4z4K6wl\ngKHBZ6hyK7Ld9nIMfosPUl2NC5on1QtlMxvsUxIZWSabT1FL2pdXQwAejiXpLNA2\nkEhIUfaKcSa4P4wHJjmEfllGnX9o/2P6hbJKGIOS25Q71rCyZD9EiMbyVuVOLg6Y\nJvowtJ/pU4a5AlzaV3D5uDOr8m6XnA6zGr7WqnhK8LpWilrI3fTMXXTW57PbCEGA\nTgE4kvX6bjhzgZRaNrXJJBKycKSEioWf8SWewepFIWog03hHQfFv3KpMMGdGXvjY\n0/t+1439AgMBAAECggEAAn2acWMylLoWHi45AxzrdkbR+QAqErCbEQpo9Ypcn0tj\n/bH9+W+l7LVq6JNPja+HZx6iPfufI0SvBNBFl0nOaNS9cDY+WuQFfKtdOK+sR1Pg\noaOqKZkyUY4xwoFwtAjSKxP+zzqENDhjZB43d7PE8dRYBrXVkxsoGN9FskBZZyk8\nhybxtaAl/LRUFT6cvJqncehGfvlyZaNelaXsO8hZMziS3tCNRprP7vD421JpZ7PN\nG15xds+4ktlftlmqomapWMeU98E5it5e43/T5dvXX2X1YiO5uSWbHsDPpScCzDiN\nKBRZzULzOqylrf16THl40CiHNpOTvX/Hgnvarb+o6QKBgQD91GoEBYUwjNmYWiJP\nGjKxYjyFZZKfYTW46yuD4P6dSYopebYEM0ZWLbNTizWmB9P1OAfF7cZDMAXopbYF\n0QM1r+9gg3aSf52H3J4a3br0Gi4tWiCIlEKHOO/J+HBe8/A+GfWvEO0QkGFvBcU/\ntoV4lVLcorSWwkPzWa6jTBbX2QKBgQDNQ2R/ApA5W/kEv3jxP5vxPZNw3YaAg3BV\nkE44KunbwYSXTqpr6ff6Jxw/HfRc2ZlQLHz4y+nK9gDMIQiJMDGbCL9tWpFScNi/\n3NbQ4fUSGCyDs9BJbIxtZN0NycRy/KEYmNw/FwQDtawoVZqxFmdAOV0GJx8+FmGX\nvhIf/gqUxQKBgDZ/f8+jO8iDxUhPueQP9Ohe9i2R9Fwh6/3rCCnFigVNP8vN5QWb\n2LMyFrmOPxOJxLl2sTyO462TRwF/ashu6uiBAL1RHIkxuynrdUrBZp14bYexPSD1\n7B7KW7majM3mRCOhQT24PZ370d+bdpFKZ/fO376ddHaV+S7rh3JqKNFpAoGAAsjM\nPzDQtgZ6XUcfo94iBma4bkqC/ZFK385CUV67p2B7pPXLOAWHeJw5NN36J5xICR9h\nXpqdhERMBHjaPcoqkhjPR/N3jy+6sPeU7mZyRZmQWQUCaUyQpxc8LGi1Qn4MzWGd\nczmjs00ulal7nLVaFzPwABpdwSDamA1a/5YZnKUCgYALJceu55+aJPOUd5nJ580D\n3yZOo7FTlCol0kquTmktFNx460ZX6+mOq7Fjr12eEzFxIMt/VNm8RUTQca0PqNCh\n28TY8qmxeHLVjHGRiuVM/mNJP1QjqNlYK5r3N2fDzTHdaJN1w/npwoDe3UnSUQro\n6QSDopXeu6HW6hHXMjS3gg==\n-----END PRIVATE KEY-----\n",
+    "client_email": "firebase-adminsdk-oi92z@celestial-license.iam.gserviceaccount.com",
+    "client_id": "103169111614118822004",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-oi92z%40celestial-license.iam.gserviceaccount.com"
+  }
