@@ -9,30 +9,11 @@ from st_aggrid import GridUpdateMode
 from st_aggrid.grid_options_builder import GridOptionsBuilder
 from google.cloud import firestore
 
+st.header("Today's entries")
 if 'count' not in st.session_state:
     st.session_state.count = 0
 
 db = firestore.Client.from_service_account_json("firestore-key.json")
-
-# for entering data: number will be text received from model-
-
-
-# def ent():
-#     doc_ref = db.collection("license").document(
-#         "car" + str(st.session_state.count))
-#     st.session_state.count += 1
-#     doc_ref.set({
-#         "Number": "13236",
-#         "InTime": firestore.SERVER_TIMESTAMP
-#     })
-
-
-# cap_button = st.button("Enter")
-
-# if cap_button:
-#     ent()
-#     st.text("Captured Successfully")
-# -------------------------------------
 
 
 def sel():

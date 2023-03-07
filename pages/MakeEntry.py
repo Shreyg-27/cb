@@ -1,5 +1,6 @@
 import final_car_plate_number_recognition
 import streamlit as st
+from AB.nav import *
 from google.cloud import firestore
 
 st.write(final_car_plate_number_recognition.text)
@@ -27,3 +28,4 @@ cap_button = st.button("Enter")
 if cap_button:
     ent()
     st.text("Captured Successfully")
+    nav_page("Table")

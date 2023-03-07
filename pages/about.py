@@ -1,8 +1,8 @@
 import streamlit as st
+from AB.nav import *
 from ABOUT.st_functions import st_button
 
 st.title(':blue[OUR TEAM]')
-
 
 st.header('*:black[FOUNDERS]*')
 

@@ -90,7 +90,7 @@ result
 # else:
 #     text = result[1][-2]
 # print(text)
-
+# print(result, "juuuuu")
 if (len(result) == 1):
     text = result[0][-2]
 else:
