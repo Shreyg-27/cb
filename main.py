@@ -5,7 +5,7 @@ from datetime import datetime
 from AB.nav import *
 
 
-st.title("CELESTIAL BISCUIT - 26")
+st.title("Project Name")
 # Configuration Key
 firebaseConfig = {
     'apiKey': "AIzaSyC_pWSoVUFZm5B4tsmUDo5Mh7YTShZ0bWk",
@@ -25,7 +25,7 @@ auth = firebase.auth()
 # Database
 db = firebase.database()
 storage = firebase.storage()
-st.sidebar.title("Cb 26")
+#st.sidebar.title("Cb 26")
 
 # Authentication
 choice = st.sidebar.selectbox('login/Signup', ['Login', 'Sign up'])
@@ -45,7 +45,7 @@ if choice == 'Sign up':
     if submit:
         user = auth.create_user_with_email_and_password(email, password)
         st.success('Your account is created suceesfully!')
-        st.balloons()
+        #st.balloons()
 
         # Sign in
         user = auth.sign_in_with_email_and_password(email, password)
@@ -61,7 +61,7 @@ if choice == 'Login':
         user = auth.sign_in_with_email_and_password(email, password)
         st.write(
             '<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
-        st.balloons()
+        #st.balloons()
         b1 = st.button("Login")
         if b1:
             nav_page("home")
