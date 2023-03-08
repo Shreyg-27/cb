@@ -14,7 +14,8 @@ if b1:
 if picture:
     with open('test.jpg', 'wb') as file:
         file.write(picture.getbuffer())
-    img = Image.open(file)
+# while picture:
+#     img = Image.open(file)
 #
 
     # np_img = np.array(img)

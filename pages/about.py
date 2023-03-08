@@ -18,7 +18,7 @@ with col1:
 
 
 with col2:
-    st.image("ABOUT\Images\ShreyaGanjoo.jpeg")
+    st.image("ABOUT\Images\og.jpeg")
     st.caption("Nishtha Goyal")
     st_button('linkedin', 'https://www.linkedin.com/in/nishtha0801/',
               'LinkedIn', icon_size)
