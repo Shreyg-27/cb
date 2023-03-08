@@ -52,15 +52,25 @@ if choice == 'Sign up':
         db.child(user['localId']).child("Handle").set(handle)
         db.child(user['localId']).child("ID").set(user['localId'])
         st.title('Welcome ' + handle)
-        st.info('Login via login drop down selection')
+        #st.info('Login via login drop down selection')
+        st.write(
+              '<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
 # Login Block
 if choice == 'Login':
     login = st.sidebar.checkbox('Login')
+    logout = st.sidebar.checkbox('Logout')
+
+    if logout:
+      login = False
+      st.title('Logged out')
+
     if login:
         user = auth.sign_in_with_email_and_password(email, password)
         st.write(
             '<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
+        st.title('Welcome')
+        
         #st.balloons()
         b1 = st.button("Login")
         if b1:
