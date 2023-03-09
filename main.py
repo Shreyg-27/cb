@@ -10,10 +10,65 @@ from htbuilder.funcs import rgba, rgb
 from firebase_admin import auth
 # from main import *
 
+
+import json
+from pathlib import Path
+
+import streamlit as st
+from streamlit.source_util import _on_pages_changed, get_pages
+
+DEFAULT_PAGE = "main.py"
+
+
+def get_all_pages():
+    default_pages = get_pages(DEFAULT_PAGE)
+
+    pages_path = Path("pages.json")
+
+    if pages_path.exists():
+        saved_default_pages = json.loads(pages_path.read_text())
+    else:
+        saved_default_pages = default_pages.copy()
+        pages_path.write_text(json.dumps(default_pages, indent=4))
+
+    return saved_default_pages
+
+
+def clear_all_but_first_page():
+    current_pages = get_pages(DEFAULT_PAGE)
+
+    if len(current_pages.keys()) == 1:
+        return
+
+    get_all_pages()
+
+    # Remove all but the first page
+    key, val = list(current_pages.items())[0]
+    current_pages.clear()
+    current_pages[key] = val
+
+    _on_pages_changed.send()
+
+
+def show_all_pages():
+    current_pages = get_pages(DEFAULT_PAGE)
+
+    saved_pages = get_all_pages()
+
+    missing_keys = set(saved_pages.keys()) - set(current_pages.keys())
+
+    # Replace all the missing pages
+    for key in missing_keys:
+        current_pages[key] = saved_pages[key]
+
+    _on_pages_changed.send()
+
+
 st.set_page_config(page_title="Project name")
-st.image(logo.jpeg, width=100)
-st.markdown("<h1 style='text-align: center; color: White;'>Project Name</h1>", unsafe_allow_html=True)
-#st.title("Project Name")
+st.image('log.jpeg', width=100)
+st.markdown("<h1 style='text-align: center; color: White;'>Project Name</h1>",
+            unsafe_allow_html=True)
+# st.title("Project Name")
 
 # Configuration Key
 firebaseConfig = {
@@ -32,13 +87,15 @@ with col1:
     st.image("Sign_up.png")
     st.caption("Sign up")
     st.write("This is the sign up page for the project.")
-    st.write("First time user need to create an account with their emial password and username.")
+    st.write(
+        "First time user need to create an account with their emial password and username.")
 
 with col2:
     st.image("Login.png")
     st.caption("Login")
     st.write("This is the login page for the project.")
-    st.write("The user can login in the (project name) by entering the credentials used for signing up.")
+    st.write(
+        "The user can login in the (project name) by entering the credentials used for signing up.")
 
 # Firebase Authentication
 firebase = pyrebase.initialize_app(firebaseConfig)
@@ -58,12 +115,12 @@ email = st.sidebar.text_input('Please enter your email address')
 password = st.sidebar.text_input('Please enter your password', type='password')
 
 # App
-
+clear_all_but_first_page()
 # Sign up Block
 if choice == 'Sign up':
     handle = st.sidebar.text_input(
         'Username', value='Default')
-    submit = st.sidebar.button('Create my account')
+    submit = st.sidebar.button('Create my account and Login')
 
     if submit:
         user = auth.create_user_with_email_and_password(email, password)
@@ -73,34 +130,39 @@ if choice == 'Sign up':
         user = auth.sign_in_with_email_and_password(email, password)
         db.child(user['localId']).child("Handle").set(handle)
         db.child(user['localId']).child("ID").set(user['localId'])
-        st.title('Welcome ' + handle)
+        # st.title('Welcome ' + handle)
+        nav_page("home")
+        show_all_pages()
         # st.info('Login via login drop down selection')
         st.write(
             '<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
 # Login Block
 if choice == 'Login':
-    login = st.sidebar.checkbox('Login')
-    logout = st.sidebar.checkbox('Logout')
+    login = st.sidebar.button('Login')
+    # logout = st.sidebar.checkbox('Logout')
 
-    if logout:
-        login = False
-        st.title('Logged out')
+    # if logout:
+    #     login = False
+    #     st.title('Logged out')
 
     if login:
         user = auth.sign_in_with_email_and_password(email, password)
         st.write(
             '<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
-        st.title('Welcome')
+        # st.title('Welcome')
+        nav_page("home")
+        show_all_pages()
 
         # st.balloons()
-        b1 = st.button("Login")
-        if b1:
-            nav_page("home")
+        # b1 = st.button("Login")
+        # if b1:
+        #     nav_page("home")
+        #     show_all_pages()
 
         # bio = st.radio('Jump to', ['Home'])
         # if bio == 'Home':
-            # col1, col2 = st.columns(2)
+        # col1, col2 = st.columns(2)
 
 # user = firebase.auth().currentUser
 # print('Successfully fetched user data: {0}'.format(user.uid))
@@ -170,7 +232,7 @@ def footer():
         # width=px(25), height=px(25)),
         # " with ❤️ by ",
         link("https://instagram.com/celestialbiscuit?igshid=YmMyMTA2M2Y=",
-             "CelsetialBiscuit"),
+             "CelestialBiscuit"),
         # br(),
         # link("https://buymeacoffee.com/chrischross", image('https://i.imgur.com/thJhzOO.png')),
     ]
