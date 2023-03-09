@@ -7,6 +7,8 @@ import streamlit as st
 from htbuilder import HtmlElement, div, ul, li, br, hr, a, p, img, styles, classes, fonts
 from htbuilder.units import percent, px
 from htbuilder.funcs import rgba, rgb
+from firebase_admin import auth
+# from main import *
 
 
 st.title("Project Name")
@@ -26,10 +28,11 @@ firebaseConfig = {
 firebase = pyrebase.initialize_app(firebaseConfig)
 auth = firebase.auth()
 
+
 # Database
 db = firebase.database()
 storage = firebase.storage()
-#st.sidebar.title("Cb 26")
+# st.sidebar.title("Cb 26")
 
 # Authentication
 choice = st.sidebar.selectbox('login/Signup', ['Login', 'Sign up'])
@@ -49,16 +52,15 @@ if choice == 'Sign up':
     if submit:
         user = auth.create_user_with_email_and_password(email, password)
         st.success('Your account is created suceesfully!')
-        #st.balloons()
 
         # Sign in
         user = auth.sign_in_with_email_and_password(email, password)
         db.child(user['localId']).child("Handle").set(handle)
         db.child(user['localId']).child("ID").set(user['localId'])
         st.title('Welcome ' + handle)
-        #st.info('Login via login drop down selection')
+        # st.info('Login via login drop down selection')
         st.write(
-              '<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
+            '<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
 # Login Block
 if choice == 'Login':
@@ -66,8 +68,8 @@ if choice == 'Login':
     logout = st.sidebar.checkbox('Logout')
 
     if logout:
-      login = False
-      st.title('Logged out')
+        login = False
+        st.title('Logged out')
 
     if login:
         user = auth.sign_in_with_email_and_password(email, password)
@@ -75,7 +77,7 @@ if choice == 'Login':
             '<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
         st.title('Welcome')
 
-        #st.balloons()
+        # st.balloons()
         b1 = st.button("Login")
         if b1:
             nav_page("home")
@@ -83,6 +85,10 @@ if choice == 'Login':
         # bio = st.radio('Jump to', ['Home'])
         # if bio == 'Home':
             # col1, col2 = st.columns(2)
+
+# user = firebase.auth().currentUser
+# print('Successfully fetched user data: {0}'.format(user.uid))
+
 
 def image(src_as_string, **style):
     return img(src=src_as_string, style=styles(**style))
@@ -144,13 +150,14 @@ def layout(*args):
 
 def footer():
     myargs = [
-        #"Made in ",
-        #image('https://avatars3.githubusercontent.com/u/45109972?s=400&v=4',
-              #width=px(25), height=px(25)),
-        #" with ❤️ by ",
-        link("https://instagram.com/celestialbiscuit?igshid=YmMyMTA2M2Y=", "CelsetialBiscuit"),
-        #br(),
-        #link("https://buymeacoffee.com/chrischross", image('https://i.imgur.com/thJhzOO.png')),
+        # "Made in ",
+        # image('https://avatars3.githubusercontent.com/u/45109972?s=400&v=4',
+        # width=px(25), height=px(25)),
+        # " with ❤️ by ",
+        link("https://instagram.com/celestialbiscuit?igshid=YmMyMTA2M2Y=",
+             "CelsetialBiscuit"),
+        # br(),
+        # link("https://buymeacoffee.com/chrischross", image('https://i.imgur.com/thJhzOO.png')),
     ]
     layout(*myargs)
 

@@ -8,7 +8,11 @@ from st_aggrid import AgGrid
 from st_aggrid import GridUpdateMode
 from st_aggrid.grid_options_builder import GridOptionsBuilder
 from google.cloud import firestore
+# from firebase_admin import auth
+# from main import *
 
+# user = auth.get_user_by_email(email)
+# print('Successfully fetched user data: {0}'.format(user.uid))
 st.header("Today's entries")
 if 'count' not in st.session_state:
     st.session_state.count = 0
@@ -27,7 +31,8 @@ def sel():
 today = datetime.datetime.combine(datetime.date.today(),
                                   datetime.time(00, 00, 00))
 
-docs = db.collection('license').where('InTime', '>', today).stream()
+docs = db.collection('license').where(
+    'userid', '==', 'abc').where('InTime', '>', today).stream()
 df = pd.DataFrame(columns=['Name', 'Number',
                   'InTime', 'OutTime'])
 for doc in docs:
