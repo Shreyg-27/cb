@@ -10,8 +10,11 @@ from htbuilder.funcs import rgba, rgb
 from firebase_admin import auth
 # from main import *
 
+st.set_page_config(page_title="Project name")
+st.image(logo.jpeg, width=100)
+st.markdown("<h1 style='text-align: center; color: White;'>Project Name</h1>", unsafe_allow_html=True)
+#st.title("Project Name")
 
-st.title("Project Name")
 # Configuration Key
 firebaseConfig = {
     'apiKey': "AIzaSyC_pWSoVUFZm5B4tsmUDo5Mh7YTShZ0bWk",
@@ -23,6 +26,19 @@ firebaseConfig = {
     'appId': "1:1097565777278:web:46750dde0a58db9f96d72f",
     'measurementId': "G-NMGKYF41BB"
 }
+
+col1, col2 = st.columns(2)
+with col1:
+    st.image("Sign_up.png")
+    st.caption("Sign up")
+    st.write("This is the sign up page for the project.")
+    st.write("First time user need to create an account with their emial password and username.")
+
+with col2:
+    st.image("Login.png")
+    st.caption("Login")
+    st.write("This is the login page for the project.")
+    st.write("The user can login in the (project name) by entering the credentials used for signing up.")
 
 # Firebase Authentication
 firebase = pyrebase.initialize_app(firebaseConfig)
@@ -99,7 +115,6 @@ def link(link, text, **style):
 
 
 def layout(*args):
-
     style = """
     <style>
       # MainMenu {visibility: hidden;}
