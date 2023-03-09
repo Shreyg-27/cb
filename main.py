@@ -10,7 +10,8 @@ from htbuilder.funcs import rgba, rgb
 from firebase_admin import auth
 # from main import *
 
-
+st.set_page_config(page_title="Project name")
+st.image(HomePage_images/logo.jpeg, width=100)
 st.title("Project Name")
 # Configuration Key
 firebaseConfig = {
