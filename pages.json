@@ -1,0 +1,44 @@
+{
+    "5bc02cefb3ea9e27f1a6776eabd1935d": {
+        "page_script_hash": "5bc02cefb3ea9e27f1a6776eabd1935d",
+        "page_name": "main",
+        "icon": "",
+        "script_path": "C:\\Users\\jahna\\Dropbox\\My PC (DESKTOP-UKVOUSD)\\Desktop\\cb\\main.py"
+    },
+    "fc0b8359807d8af7ff6dc0398f2129a2": {
+        "page_script_hash": "fc0b8359807d8af7ff6dc0398f2129a2",
+        "page_name": "about",
+        "icon": "",
+        "script_path": "C:\\Users\\jahna\\Dropbox\\My PC (DESKTOP-UKVOUSD)\\Desktop\\cb\\pages\\about.py"
+    },
+    "e58f24c5759225dfca3c6821ef8cc42e": {
+        "page_script_hash": "e58f24c5759225dfca3c6821ef8cc42e",
+        "page_name": "entryNotRight",
+        "icon": "",
+        "script_path": "C:\\Users\\jahna\\Dropbox\\My PC (DESKTOP-UKVOUSD)\\Desktop\\cb\\pages\\entryNotRight.py"
+    },
+    "a9cc219f9160d4debda548f025105967": {
+        "page_script_hash": "a9cc219f9160d4debda548f025105967",
+        "page_name": "home",
+        "icon": "",
+        "script_path": "C:\\Users\\jahna\\Dropbox\\My PC (DESKTOP-UKVOUSD)\\Desktop\\cb\\pages\\home.py"
+    },
+    "fabc19e2d9039dce4628de27fd0924c8": {
+        "page_script_hash": "fabc19e2d9039dce4628de27fd0924c8",
+        "page_name": "MakeEntry",
+        "icon": "",
+        "script_path": "C:\\Users\\jahna\\Dropbox\\My PC (DESKTOP-UKVOUSD)\\Desktop\\cb\\pages\\MakeEntry.py"
+    },
+    "4dcf659de4e1ead503ae8eba138a1bf4": {
+        "page_script_hash": "4dcf659de4e1ead503ae8eba138a1bf4",
+        "page_name": "Table",
+        "icon": "",
+        "script_path": "C:\\Users\\jahna\\Dropbox\\My PC (DESKTOP-UKVOUSD)\\Desktop\\cb\\pages\\Table.py"
+    },
+    "f6ae2eec019284821c5d1c761e0223e2": {
+        "page_script_hash": "f6ae2eec019284821c5d1c761e0223e2",
+        "page_name": "take_image",
+        "icon": "",
+        "script_path": "C:\\Users\\jahna\\Dropbox\\My PC (DESKTOP-UKVOUSD)\\Desktop\\cb\\pages\\take_image.py"
+    }
+}
