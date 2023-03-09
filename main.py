@@ -11,7 +11,7 @@ from firebase_admin import auth
 # from main import *
 
 st.set_page_config(page_title="Project name")
-st.image(HomePage_images/logo.jpeg, width=100)
+st.image(logo.jpeg, width=100)
 st.markdown("<h1 style='text-align: center; color: White;'>Project Name</h1>", unsafe_allow_html=True)
 #st.title("Project Name")
 
@@ -29,13 +29,13 @@ firebaseConfig = {
 
 col1, col2 = st.columns(2)
 with col1:
-    st.image("HomePage_images/Sign_up.png")
+    st.image("Sign_up.png")
     st.caption("Sign up")
     st.write("This is the sign up page for the project.")
     st.write("First time user need to create an account with their emial password and username.")
 
 with col2:
-    st.image("HomePage_images/Login.png")
+    st.image("Login.png")
     st.caption("Login")
     st.write("This is the login page for the project.")
     st.write("The user can login in the (project name) by entering the credentials used for signing up.")
