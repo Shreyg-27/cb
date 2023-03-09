@@ -64,11 +64,19 @@ def show_all_pages():
     _on_pages_changed.send()
 
 
-st.set_page_config(page_title="Project name")
-st.image('log.jpeg', width=100)
-st.markdown("<h1 style='text-align: center; color: White;'>Project Name</h1>",
-            unsafe_allow_html=True)
-# st.title("Project Name")
+st.set_page_config(page_title = "Project name")
+#st.image('log.jpeg')
+#st.markdown("<h1 style='text-align: center; color: White;'>Project Name</h1>",unsafe_allow_html=True)
+
+col1, mid, col2 = st.columns([1,1,20])
+with col1:
+    st.image('logo.jpeg', width = 70)
+with col2:
+    #st.title('Project Name')
+    st.markdown("<h1 style='text-align: left; color: White;'>Project Name</h1>", unsafe_allow_html=True)
+
+st.write("")
+st.markdown("<h4 style='text-align: justify; color: White;'> The objective of this project is to develop a well-organised system in the vehicle number plate detection. Methods: The major techniques used in the implementation of the designs are gray scale conversion, black and white image conversion, filling holes, border detection and image segmentation.In this project we Take image of the car and search for the number plate in the image. Once the probable number plate area is located it is given to OCR. If OCR doesn't recognize the characters from the image number plate area is searched again from the image. If characters are recognized then number plate search is terminated.</h4>", unsafe_allow_html=True)
 
 # Configuration Key
 firebaseConfig = {
@@ -84,18 +92,17 @@ firebaseConfig = {
 
 col1, col2 = st.columns(2)
 with col1:
-    st.image("Sign_up.png")
+    st.image("Sign_up.jpg")
     st.caption("Sign up")
     st.write("This is the sign up page for the project.")
-    st.write(
-        "First time user need to create an account with their emial password and username.")
+    st.write("First time user need to create an account with their emaill, password and username by selecting the Sign up option from the dropdown menu.")
 
 with col2:
-    st.image("Login.png")
+    st.image("Login.jpg")
     st.caption("Login")
     st.write("This is the login page for the project.")
-    st.write(
-        "The user can login in the (project name) by entering the credentials used for signing up.")
+    st.write("The user can login in the (project name) by entering the credentials used for signing up by selecting the Login option from the dropdown menu.")    
+    st.write("You can simply click on login to logout from the page.")
 
 # Firebase Authentication
 firebase = pyrebase.initialize_app(firebaseConfig)
