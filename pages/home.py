@@ -16,7 +16,7 @@ icon_size = 20
 with col1:
     b2 = st.button("Make an Entry")
     if b2:
-        nav_page("TakeImage")
+        nav_page("Take_Image")
 with col2:
     b3 = st.button("View Entries")
     if b3:
