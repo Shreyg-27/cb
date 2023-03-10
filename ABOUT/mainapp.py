@@ -1,4 +1,5 @@
 import streamlit as st
+import auxlib
 from st_functions import st_button
 
 st.title(':blue[OUR TEAM]')
