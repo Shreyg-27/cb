@@ -129,7 +129,7 @@ if choice == 'Sign up':
         db.child(user['localId']).child("Handle").set(handle)
         db.child(user['localId']).child("ID").set(user['localId'])
         # st.title('Welcome ' + handle)
-        nav_page("home")
+        nav_page("Home")
         show_all_pages()
         # st.info('Login via login drop down selection')
         st.write(
@@ -149,7 +149,7 @@ if choice == 'Login':
         st.write(
             '<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
         # st.title('Welcome')
-        nav_page("home")
+        nav_page("Home")
         show_all_pages()
 
 col1, col2 = st.columns(2)

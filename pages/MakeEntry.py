@@ -34,17 +34,19 @@ if cap_button:
 not_correct = st.button('Number is not correct')
 
 if not_correct:
-    nav_page('entryNotRight')
+    nav_page('EntryNotRight')
 
-    
+
 st.header("**Instructions**")
 
 
-st.caption("Step1: Click on the car plate number which is going out of the university campus.")
+st.caption(
+    "Step1: Click on the car plate number which is going out of the university campus.")
 st.image("Step1.png")
 
 
-st.caption("Step2: Click on the Exited button to take the note of exit time of the campus.")
+st.caption(
+    "Step2: Click on the Exited button to take the note of exit time of the campus.")
 st.image("Step2.png")
 
 st.caption("Step3: The exit time can be viewed on the screen.")
