@@ -2,7 +2,7 @@ streamlit
 conda
 easyocr
 imutils 
-opencv-python-headless==4.1.2.30 
+# opencv-python-headless==4.1.2.30 
 opencv-python
 streamlit-aggrid
 streamlit-aggrid.grid_options_builder
