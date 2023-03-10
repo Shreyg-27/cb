@@ -82,20 +82,6 @@ firebaseConfig = {
     'measurementId': "G-NMGKYF41BB"
 }
 
-col1, col2 = st.columns(2)
-with col1:
-    st.image("Sign_up.png")
-    st.caption("Sign up")
-    st.write("This is the sign up page for the project.")
-    st.write(
-        "First time user need to create an account with their emial password and username.")
-
-with col2:
-    st.image("Login.png")
-    st.caption("Login")
-    st.write("This is the login page for the project.")
-    st.write(
-        "The user can login in the (project name) by entering the credentials used for signing up.")
 
 # Firebase Authentication
 firebase = pyrebase.initialize_app(firebaseConfig)
@@ -166,6 +152,22 @@ if choice == 'Login':
 
 # user = firebase.auth().currentUser
 # print('Successfully fetched user data: {0}'.format(user.uid))
+
+
+col1, col2 = st.columns(2)
+with col1:
+    st.image("Sign_up.png")
+    st.caption("Sign up")
+    st.write("This is the sign up page for the project.")
+    st.write(
+        "First time user need to create an account with their emial password and username.")
+
+with col2:
+    st.image("Login.png")
+    st.caption("Login")
+    st.write("This is the login page for the project.")
+    st.write(
+        "The user can login in the (project name) by entering the credentials used for signing up.")
 
 
 def image(src_as_string, **style):
