@@ -392,6 +392,7 @@ opencv-python
 firebase
 # pyrebase
 pyrebase==3.0.27
+streamlib
 # wheel==0.23.0
 # Yarg==0.1.9
 # auxlib==0.0.43
