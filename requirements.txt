@@ -382,7 +382,7 @@
 # zipp==3.8.0
 # zope.interface==5.4.0
 # streamlit
-conda
+# conda
 easyocr
 imutils 
 # opencv-python-headless==4.1.2.30 
