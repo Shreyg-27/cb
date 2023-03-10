@@ -11,5 +11,5 @@ firebase
 Pyrebase==3.0.27
 wheel==0.23.0
 Yarg==0.1.9
-# auxlib
+auxlib==0.0.43
 docopt==0.6.2
