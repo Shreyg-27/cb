@@ -64,19 +64,23 @@ def show_all_pages():
     _on_pages_changed.send()
 
 
-st.set_page_config(page_title = "Project name")
-#st.image('log.jpeg')
-#st.markdown("<h1 style='text-align: center; color: White;'>Project Name</h1>",unsafe_allow_html=True)
+st.set_page_config(page_title="Plate Sense")
 
-col1, mid, col2 = st.columns([1,1,20])
+# st.image('log.jpeg')
+# st.markdown("<h1 style='text-align: center; color: White;'>Project Name</h1>",unsafe_allow_html=True)
+
+col1, mid, col2 = st.columns([1, 8, 20])
 with col1:
-    st.image('logo.jpeg', width = 70)
+    st.image('log.jpeg', width=70)
 with col2:
-    #st.title('Project Name')
-    st.markdown("<h1 style='text-align: left; color: White;'>Project Name</h1>", unsafe_allow_html=True)
+    # st.title('Project Name')
+    st.markdown("<h1 style='text-align: left; color: White;'>Plate Sense</h1>",
+                unsafe_allow_html=True)
+    # st.markdown("<h1 style='text-align: left; color: White;'>Project Name</h1>",
+    #             unsafe_allow_html=True)
 
 st.write("")
-st.markdown("<h4 style='text-align: justify; color: White;'> The objective of this project is to develop a well-organised system in the vehicle number plate detection. Methods: The major techniques used in the implementation of the designs are gray scale conversion, black and white image conversion, filling holes, border detection and image segmentation.In this project we Take image of the car and search for the number plate in the image. Once the probable number plate area is located it is given to OCR. If OCR doesn't recognize the characters from the image number plate area is searched again from the image. If characters are recognized then number plate search is terminated.</h4>", unsafe_allow_html=True)
+st.markdown("<h6 style='text-align: justify; color: White;'> The objective of this project is to develop a well-organised system in the vehicle number plate detection. Methods: The major techniques used in the implementation of the designs are gray scale conversion, black and white image conversion, filling holes, border detection and image segmentation.In this project we Take image of the car and search for the number plate in the image. Once the probable number plate area is located it is given to OCR. If OCR doesn't recognize the characters from the image number plate area is searched again from the image. If characters are recognized then number plate search is terminated.</h6>", unsafe_allow_html=True)
 
 # Configuration Key
 firebaseConfig = {
@@ -90,19 +94,6 @@ firebaseConfig = {
     'measurementId': "G-NMGKYF41BB"
 }
 
-col1, col2 = st.columns(2)
-with col1:
-    st.image("Sign_up.jpg")
-    st.caption("Sign up")
-    st.write("This is the sign up page for the project.")
-    st.write("First time user need to create an account with their emaill, password and username by selecting the Sign up option from the dropdown menu.")
-
-with col2:
-    st.image("Login.jpg")
-    st.caption("Login")
-    st.write("This is the login page for the project.")
-    st.write("The user can login in the (project name) by entering the credentials used for signing up by selecting the Login option from the dropdown menu.")    
-    st.write("You can simply click on login to logout from the page.")
 
 # Firebase Authentication
 firebase = pyrebase.initialize_app(firebaseConfig)
@@ -161,34 +152,47 @@ if choice == 'Login':
         nav_page("home")
         show_all_pages()
 
-        # st.balloons()
-        # b1 = st.button("Login")
-        # if b1:
-        #     nav_page("home")
-        #     show_all_pages()
+col1, col2 = st.columns(2)
+with col1:
+    st.image("Sign_up.jpg")
+    st.caption("Sign up")
+    st.write("This is the sign up page for the project.")
+    st.write("First time user need to create an account with their email, password and username by selecting the Sign up option from the dropdown menu.")
 
-        # bio = st.radio('Jump to', ['Home'])
-        # if bio == 'Home':
-        # col1, col2 = st.columns(2)
+with col2:
+    st.image("Login.jpg")
+    st.caption("Login")
+    st.write("This is the login page for the project.")
+    st.write("The user can login in Plate Sense by entering the credentials used for signing up by selecting the Login option from the dropdown menu.")
+    st.write("You can simply click on login/logout optiom to logout.")
+    # st.balloons()
+    # b1 = st.button("Login")
+    # if b1:
+    #     nav_page("home")
+    #     show_all_pages()
+
+    # bio = st.radio('Jump to', ['Home'])
+    # if bio == 'Home':
+    # col1, col2 = st.columns(2)
 
 # user = firebase.auth().currentUser
 # print('Successfully fetched user data: {0}'.format(user.uid))
 
 
-col1, col2 = st.columns(2)
-with col1:
-    st.image("Sign_up.png")
-    st.caption("Sign up")
-    st.write("This is the sign up page for the project.")
-    st.write(
-        "First time user need to create an account with their emial password and username.")
+# col1, col2 = st.columns(2)
+# with col1:
+#     st.image("Sign_up.jpg")
+#     st.caption("Sign up")
+#     st.write("This is the sign up page for the project.")
+#     st.write(
+#         "First time user need to create an account with their emial password and username.")
 
-with col2:
-    st.image("Login.png")
-    st.caption("Login")
-    st.write("This is the login page for the project.")
-    st.write(
-        "The user can login in the (project name) by entering the credentials used for signing up.")
+# with col2:
+#     st.image("Login.png")
+#     st.caption("Login")
+#     st.write("This is the login page for the project.")
+#     st.write(
+#         "The user can login in the (project name) by entering the credentials used for signing up.")
 
 
 def image(src_as_string, **style):
