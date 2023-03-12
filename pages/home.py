@@ -1,20 +1,13 @@
 import streamlit as st
 # from streamlit_option_menu import option_menu
 from AB.nav import *
-# Navigation Bar
 
-# def local_css(style.css):
-#     with open(style.css) as f:
-#         st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
 col1, col2, col3 = st.columns(3)
 # col1, col2, col3, col4 = st.columns()
 icon_size = 20
-# with col1:
-#     b1 = st.button("Home")
-#     if b1:
-#         nav_page("Home")
+
 with col1:
-    b2 = st.button("Make an Entry")
+    b2 = st.button("Take an Image")
     if b2:
         nav_page("Take_Image")
 with col2:
@@ -48,52 +41,57 @@ st.write('This Project aims for Licence Plate Detection of the cars entering in 
 
 # Now we have to add the screenshots to make the app intutive.....
 st.header("Working Of Project")
-col1, col2, col3, col4 = st.columns(4)
+col1, col2 = st.columns(2)
 
-icon_size = 20
 
 with col1:
-    # st.image("sunrise.jpg")
-    st.caption("Pooja Gera")
+    st.image("homep.png")
+    st.caption("Step 1 : This is the home page containing the details of project")
 
 
 with col2:
-    # st.image("sunrise.jpg")
-    st.caption("Nishtha Goyal")
+    st.image("homet.jpeg")
+    st.caption(
+        "Step 2 : This is the take image option to direct us to take image option")
 
+st.write('#')
+st.write('#')
 
+col3, col4 = st.columns(2)
 with col3:
-    # st.image("sunrise.jpg")
-    st.caption("Gaurisha R Srivastava")
+    st.image("takep.jpeg")
+    st.caption(
+        "Step 3 : This is the take image page to take image of licence plate")
 
 with col4:
-    # st.image("sunrise.jpg")
-    st.caption("Abhigya Verma")
-col5, col6, col7 = st.columns(3)
+    st.image("takeim.jpeg")
+    st.caption(
+        "Step 4 : This is the process image option to process the given licence plate option")
+
+st.write('#')
+st.write('#')
+col5, col6 = st.columns(2)
+
 with col5:
-    # st.image("sunrise.jpg")
-    st.caption("Shreya Ganjoo")
-
-    # st.image("sunrise.jpg")
-    st.caption("Anushka Agarwal")
-
+    st.image("enterp.jpeg")
+    st.caption("Step 5 : Make an entry by enter button")
 
 with col6:
-    # st.image("sunrise.jpg")
-    st.caption("Kashika Jain")
+    st.image("entryn.png")
+    st.caption(
+        "Step 6 : Entry not correct option to correct the entry of licence plate number")
 
-    # st.image("sunrise.jpg")
-    st.caption("Khushi Jain")
-
-
+st.write('#')
+st.write('#')
+col7, col8 = st.columns(2)
 with col7:
     # st.image("sunrise.jpg")
-    st.caption("Jahnavi Malhotra")
-    # st_button('linkedin', 'https://www.linkedin.com/in/jahnavi2k/',
-    #           'LinkedIn', icon_size)
+    st.image("correctentry.jpeg")
+    st.caption("Step 7 : Enter the correct entry ")
 
-    # st.image("sunrise.jpg")
-    st.caption("Khushi Sinha")
+with col8:
+    st.image("tablep.jpeg")
+    st.caption("Step 8 : This is the table showing the entries of the cars")
 # import streamlit as st
 # from AB.nav import *
 # st.title('Celestial Biscuit🌌🚀-Team:26')
