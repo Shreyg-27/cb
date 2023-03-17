@@ -80,7 +80,7 @@ with col2:
     #             unsafe_allow_html=True)
 
 st.write("")
-st.markdown("<h6 style='text-align: justify; color: White;'> The objective of this project is to develop a well-organised system in the vehicle number plate detection. Methods: The major techniques used in the implementation of the designs are gray scale conversion, black and white image conversion, filling holes, border detection and image segmentation.In this project we Take image of the car and search for the number plate in the image. Once the probable number plate area is located it is given to OCR. If OCR doesn't recognize the characters from the image number plate area is searched again from the image. If characters are recognized then number plate search is terminated.</h6>", unsafe_allow_html=True)
+st.markdown("<h6 style='text-align: justify; color: White;'> We are making things easier by automatically reading the licence plate and making the attendance process smoother.Please follow the easy steps given below to login into the amazing app ✨</h6>", unsafe_allow_html=True)
 
 # Configuration Key
 firebaseConfig = {
@@ -152,6 +152,7 @@ if choice == 'Login':
         nav_page("Home")
         show_all_pages()
 
+st.title("Instructions")
 col1, col2 = st.columns(2)
 with col1:
     st.image("Sign_up.jpg")
@@ -164,7 +165,7 @@ with col2:
     st.caption("Login")
     st.write("This is the login page for the project.")
     st.write("The user can login in Plate Sense by entering the credentials used for signing up by selecting the Login option from the dropdown menu.")
-    st.write("You can simply click on login/logout optiom to logout.")
+    st.write("You can simply click on login/logout option to logout.")
     # st.balloons()
     # b1 = st.button("Login")
     # if b1:
